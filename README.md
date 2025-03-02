@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next-Chat-Server-App
 
-## Getting Started
+A real-time chat application built with Next.js, featuring Discord-like server and channel management. 
+This full-stack application showcases a modern architecture that combines Next.js 14, Clerk authentication, Prisma ORM, and PostgreSQL.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Server Management**:
+  - Create and customize servers
+  - Generate and manage invite links for adding members
+  - Edit server details
+  - Delete servers as the server owner
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Channel Management**:
+  - Create different channel types (Text, Voice, Video)
+  - Edit and delete channels
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Member Management**:
+  - Role-based permissions system (Admin, Moderator, Guest)
+  - Invite users via generated links
+  - Kick members from servers
+  - Change member roles
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **UI/UX**:
+  - Modern, responsive design with Tailwind CSS
+  - Server and channel navigation sidebar
+  - Role indicators with icons
+  - Custom tooltips for better user experience
 
-## Learn More
+## Technology Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Frontend**:
+  - Next.js 14 with App Router
+  - React 18 with React Server Components
+  - Tailwind CSS for styling
+  - shadcn/ui components
+  - Zustand for state management
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Backend**:
+  - Next.js API routes
+  - PostgreSQL database
+  - Prisma ORM for database operations
+  - Clerk authentication
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **File Handling**:
+  - UploadThing for file uploads
+  - Support for image uploads
 
-## Deploy on Vercel
+## Architecture
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The application follows a modern Next.js architecture with:
+- Route grouping for organization (auth, invite, main, setup)
+- Server-side data fetching with SSR
+- Modular component structure
+- Modal-based UI for common operations
+- Role-based access control
